@@ -1,8 +1,9 @@
 # 学園祭（2024）
 
+main,developではコミットしないこと
+
 ##新機能開発
 ```
-$ git flow init
 $ git flow feature start ブランチ名
 
 —コーディング—
