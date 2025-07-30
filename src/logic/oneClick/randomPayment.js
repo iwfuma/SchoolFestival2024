@@ -1,3 +1,10 @@
+import { getRandomInt } from './random.js';
+
+export function getRandomPaymentAmount() {
+  return getRandomInt(1, 500) * 10 ** 6;
+}
+
+/*
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -9,4 +16,4 @@ document.addEventListener('DOMContentLoaded', () => {
     let paymentAmount = getRandomInt(10, 500) * 32000; 
     document.getElementById('paymentAmount').textContent = paymentAmount.toLocaleString();
 });
-
+*/

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./../../../css/Oneclick/Home.css"; 
+import "./Home.css"; 
 import advertisingImage from "../../../assets/oneClick/advertising.png";
 
 const OneClickHome = () => {

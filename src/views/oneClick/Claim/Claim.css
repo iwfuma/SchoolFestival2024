@@ -1,0 +1,69 @@
+.claim-container h1,
+.claim-container h2,
+.claim-container p {
+  text-align: center;
+}
+
+.claim-container p {
+  color: red;
+}
+
+.claim-container table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 0 auto 30px;
+}
+
+.claim-container td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.claim-container .countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 48px;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* メディアクエリ：768px以下 */
+@media (max-width: 768px) {
+  .claim-container .countdown-container {
+    font-size: 36px;
+  }
+
+  .claim-container table {
+    width: 80%;
+  }
+
+  .claim-container td {
+    padding: 8px;
+  }
+}
+
+/* メディアクエリ：480px以下 */
+@media (max-width: 480px) {
+  .claim-container .countdown-container {
+    font-size: 28px;
+  }
+
+  .claim-container table {
+    width: 100%;
+  }
+
+  .claim-container td {
+    padding: 5px;
+  }
+}
+
+
+body.claim-background {
+  background-color: #f5f5dc; 
+}
