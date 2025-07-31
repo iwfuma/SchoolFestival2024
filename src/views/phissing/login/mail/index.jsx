@@ -1,20 +1,31 @@
 import React from "react";
-import { Box, Typography, TextField, Button, Link, Divider } from "@mui/material";
-import { Navigate } from "react-router-dom";
-import amezonlogo from "../../../../assets/phishing/amezonlogo.png"
+import {
+  Box,
+  Typography,
+  TextField,
+  Button,
+  Link,
+  Divider,
+} from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import amezonlogo from "../../../../assets/phishing/amezonlogo.png";
 
 const LoginMail = () => {
+  const navigate = useNavigate();
+
   const saveDataAndGoNext = () => {
     const inputText = document.getElementById("inputText")?.value.trim();
-    
+
     if (inputText) {
       localStorage.setItem("savedText", inputText);
-      window.location.href = "";
+      navigate("/phishing/login/pass");
     } else {
       alert("Eメールまたは携帯電話番号を入力してください。");
     }
-    Navigate("phshing/login/pass")
+  };
 
+  const goToSignup = () => {
+    navigate("/phishing/signup"); // 適切なルート名に変更してください
   };
 
   return (
@@ -31,7 +42,7 @@ const LoginMail = () => {
         fontFamily: "Arial, sans-serif",
       }}
     >
-      {/* ロゴと.co.jp */}
+      {/* ロゴ */}
       <Box display="flex" justifyContent="center" alignItems="center" mb={2}>
         <Box
           component="img"
@@ -44,12 +55,12 @@ const LoginMail = () => {
         </Typography>
       </Box>
 
-      {/* ログインタイトル */}
+      {/* タイトル */}
       <Typography variant="h4" fontWeight={200} mb={2} align="center">
         ログイン
       </Typography>
 
-      {/* 入力フォーム */}
+      {/* メールアドレス入力 */}
       <Box mb={2}>
         <Typography mb={0.5}>Eメールまたは携帯電話番号</Typography>
         <TextField
@@ -61,9 +72,11 @@ const LoginMail = () => {
         />
       </Box>
 
+      {/* 次に進む */}
       <Button
         variant="contained"
         fullWidth
+        onClick={saveDataAndGoNext}
         sx={{
           bgcolor: "#ffd500",
           color: "black",
@@ -76,8 +89,6 @@ const LoginMail = () => {
           textTransform: "none",
           mb: 2,
         }}
-        onClick={saveDataAndGoNext}
-        
       >
         次に進む
       </Button>
@@ -110,22 +121,26 @@ const LoginMail = () => {
       </Typography>
 
       <Divider sx={{ mb: 2 }} />
-      <Typography variant="body2" color="text.secondary" textAlign="center" mb={1}>
+
+      <Typography
+        variant="body2"
+        color="text.secondary"
+        textAlign="center"
+        mb={1}
+      >
         初めてAmezonをご利用ですか？
       </Typography>
 
-      {/* アカウント作成ボタン */}
+      {/* アカウント作成 */}
       <Button
         variant="outlined"
         fullWidth
+        onClick={goToSignup}
         sx={{
           borderRadius: 1,
           textTransform: "none",
           fontSize: 13,
           mb: 5,
-        }}
-        onClick={() => {
-          window.location.href = "http://127.0.0.1:5500/フィッシング詐欺/index.html";
         }}
       >
         Amezonアカウントを作成する
@@ -155,7 +170,11 @@ const LoginMail = () => {
             href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&amp;nodeId=643006"
             target="_blank"
             rel="noopener noreferrer"
-            sx={{ color: "#0066c0", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}
+            sx={{
+              color: "#0066c0",
+              textDecoration: "none",
+              "&:hover": { textDecoration: "underline" },
+            }}
           >
             利用規約
           </Link>
@@ -163,7 +182,11 @@ const LoginMail = () => {
             href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_desktop_footer_privacy_notice?ie=UTF8&amp;nodeId=643000"
             target="_blank"
             rel="noopener noreferrer"
-            sx={{ color: "#0066c0", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}
+            sx={{
+              color: "#0066c0",
+              textDecoration: "none",
+              "&:hover": { textDecoration: "underline" },
+            }}
           >
             プライバシー規約
           </Link>
@@ -171,7 +194,11 @@ const LoginMail = () => {
             href="https://www.amazon.co.jp/help"
             target="_blank"
             rel="noopener noreferrer"
-            sx={{ color: "#0066c0", textDecoration: "none", "&:hover": { textDecoration: "underline" } }}
+            sx={{
+              color: "#0066c0",
+              textDecoration: "none",
+              "&:hover": { textDecoration: "underline" },
+            }}
           >
             ヘルプ
           </Link>
