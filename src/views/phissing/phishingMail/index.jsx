@@ -9,8 +9,9 @@ const PhishingMail = () => {
   const Navigate = useNavigate();
 
   const handleAccept = () => {
-    Navigate("/phishing/")
+    Navigate("/phishing/login/email")
   }
+
 
   return (
     <div className={styles.body}>
@@ -61,8 +62,8 @@ const PhishingMail = () => {
         {/* フッター部分 */}
         <div className={styles.footer}>
           <p>
-            <a href="#">利用規約</a> | <a href="#">プライバシー規約</a> |{" "}
-            <a href="#">ヘルプ</a>
+            <a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM">利用規約</a> | <a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ">プライバシー規約</a> |{" "}
+            <a href="https://www.amazon.co.jp/hz/contact-us/foresight/hubgateway">ヘルプ</a>
           </p>
           <p>&copy; 1996-2024 Amezon.com, Inc. All rights reserved.</p>
         </div>
