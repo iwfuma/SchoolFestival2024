@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import {
   Box,
   Typography,
@@ -11,13 +11,14 @@ import { useNavigate } from "react-router-dom";
 import amezonlogo from "../../../../assets/phishing/amezonlogo.png";
 
 const LoginMail = () => {
+  const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
-  const saveDataAndGoNext = () => {
-    const inputText = document.getElementById("inputText")?.value.trim();
+  const onSubmit = () => {
+    const trimmedEmail = email.trim();
 
-    if (inputText) {
-      localStorage.setItem("savedText", inputText);
+    if (trimmedEmail) {
+      localStorage.setItem("savedText", trimmedEmail);
       navigate("/phishing/login/pass");
     } else {
       alert("Eメールまたは携帯電話番号を入力してください。");
@@ -25,7 +26,7 @@ const LoginMail = () => {
   };
 
   const goToSignup = () => {
-    navigate("/phishing/signup"); // 適切なルート名に変更してください
+    navigate("/phishing/signup");
   };
 
   return (
@@ -64,11 +65,12 @@ const LoginMail = () => {
       <Box mb={2}>
         <Typography mb={0.5}>Eメールまたは携帯電話番号</Typography>
         <TextField
-          id="inputText"
           variant="outlined"
           size="small"
           fullWidth
           sx={{ mb: 2 }}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
         />
       </Box>
 
@@ -76,7 +78,7 @@ const LoginMail = () => {
       <Button
         variant="contained"
         fullWidth
-        onClick={saveDataAndGoNext}
+        onClick={onSubmit}
         sx={{
           bgcolor: "#ffd500",
           color: "black",
@@ -100,7 +102,7 @@ const LoginMail = () => {
           href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=643006"
           target="_blank"
           rel="noopener noreferrer"
-          sx={{ ml: 0.5, mr: 0.5 }}
+          sx={{ mx: 0.5 }}
         >
           利用規約
         </Link>

@@ -12,13 +12,11 @@ import {
 const LoginPass = () => {
   const navigate = useNavigate();
   const [savedEmail, setSavedEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [password, setPassword] = useState(""); 
 
   useEffect(() => {
     const emailFromStorage = localStorage.getItem("savedText") || "";
-    const passwordFromStorage = localStorage.getItem("savedPassword") || "";
     setSavedEmail(emailFromStorage);
-    setPassword(passwordFromStorage);
   }, []);
 
   const handleSubmit = (e) => {
@@ -29,12 +27,11 @@ const LoginPass = () => {
       return;
     }
 
-    // 保存
     localStorage.setItem("savedText", savedEmail);
     localStorage.setItem("savedPassword", password);
 
-    // ページ遷移（React Router 使用）
-    navigate("/confirm"); // ← ルーティング先を適切に設定
+  
+    navigate("/phishing/confirm");
   };
 
   return (
@@ -68,7 +65,7 @@ const LoginPass = () => {
       {/* 表示用メールアドレス */}
       <Box display="flex" alignItems="center" justifyContent="space-between" mb={2}>
         <Typography>{savedEmail || "メールが未設定です"}</Typography>
-        <Link href="/login">変更</Link>
+        <Link href="/phishing/login/email">変更</Link>
       </Box>
 
       {/* パスワード入力 */}
@@ -82,6 +79,7 @@ const LoginPass = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           sx={{ mb: 2 }}
+          autoComplete="new-password"
         />
 
         <Link
