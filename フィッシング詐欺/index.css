@@ -1,0 +1,113 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* メール全体のコンテナ */
+.container {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ヘッダー部分 */
+.header {
+    padding: 20px;
+    background-color: #121820;
+    text-align: center;
+}
+
+.header img {
+    width: 300px;
+}
+
+/* キャンペーンバナー */
+.banner {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.banner img {
+    width: 100%;
+    max-width: 400px;
+}
+
+/* 本文のスタイル */
+.content {
+    padding: 20px;
+    color: #333333;
+}
+
+.content h2 {
+    color: #333333;
+    font-size: 42px;
+    text-align: center;
+    margin: 0;
+}
+
+.content p {
+    font-size: 21px;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* 情報ボックス */
+.info-box {
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+.info-box p {
+    margin: 5px 0;
+    line-height: 1.6;
+}
+
+.info-box strong {
+    color: #333333;
+}
+
+/* ボタン */
+.btn {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px 24px;
+    color: white;
+    background-color: #ff9900;
+    text-decoration: none;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #e68a00;
+}
+
+/* フッター部分 */
+.footer {
+    padding: 15px;
+    background-color: #f3f3f3;
+    font-size: 12px;
+    color: #888888;
+    text-align: center;
+}
+
+.footer a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

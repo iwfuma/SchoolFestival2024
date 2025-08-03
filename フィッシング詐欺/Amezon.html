@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html leng="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Amezon.css">
+    <title>Amazonログイン</title>
+
+    <script>
+        // 入力されたデータをlocalStorageに保存し、次のページに移動する
+        function saveDataAndGoNext() {
+            const inputText = document.getElementById("inputText").value;
+            if (inputText) {
+                localStorage.setItem("savedText", inputText);
+                window.location.href = "/Users/honmakei/Desktop/学園祭/自作/Amezon2.html"; // 次のページへ移動
+            } else {
+                alert("Eメールまたは携帯電話番号を入力してください。");
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="image-text">
+        <img src="amezon5.png" alt="Amezon ロゴ">
+        <p>.co.jp</p>
+    </div>
+    <div class="container">
+        <div class="text">
+
+            <h1>ログイン</h1>
+
+            <div class="a-row a-spacing-base">
+                <label for="inputText">Eメールまたは携帯電話番号</label><br>
+                <input type="text" id="inputText" />
+
+                <span id="emailErrorAnnounce" style="display: none;">
+                    メールアドレスまたは携帯電話番号を入力してください
+                </span>
+                <!-- ボタン -->
+                <a href="http://127.0.0.1:5500/フィッシング詐欺/Amezon2.html" class="btn" onclick="saveDataAndGoNext()">次に進む</a>
+
+                <h5>Amazonの<a
+                        href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_signin_notification_condition_of_use?ie=UTF8&nodeId=643006">利用規約</a>と
+                    <a
+                        href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_signin_notification_privacy_notice?ie=UTF8&nodeId=643000">プライバシー規約</a>
+                    に同意いただける場合はログインしてください。
+                </h5>
+
+                <h5>パスワードを忘れた場合</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="a-divider a-divider-break">
+        <h5 aria-level="5">初めてAmezonをご利用ですか？</h5>
+    </div>
+
+
+    <section>
+        <div class="container2">
+            <button class="create-account-button" onclick="location.href='http://127.0.0.1:5500/フィッシング詐欺/index.html'">
+                Amezonアカウントを作成する
+            </button>
+        </div>
+    </section>
+
+    <footer>
+        <span class="auth-footer-seperator"></span>
+
+        <ul>
+
+            <li style="list-style-type: none; margin: 0; padding:0; display: inline-block;">
+
+                <a class="a-link-normal a-nowrap" target="_blank"
+                    href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_desktop_footer_cou?ie=UTF8&amp;nodeId=643006">
+                    利用規約
+                </a>
+                <span class="auth-footer-seperator"></span>
+            </li>
+
+            <li style="list-style-type: none; margin: 0; padding:0; display: inline-block;">
+
+
+                <a class="a-link-normal a-nowrap" target="_blank"
+                    href="https://www.amazon.co.jp/gp/help/customer/display.html/ref=ap_desktop_footer_privacy_notice?ie=UTF8&amp;nodeId=643000">
+                    プライバシー規約
+                </a>
+                <span class="auth-footer-seperator"></span>
+            </li>
+
+            <li style="list-style-type: none; margin: 0; padding:0; display: inline-block;">
+
+
+                <a class="a-link-normal a-nowrap" target="_blank" href="https://www.amazon.co.jp/help">
+                    ヘルプ
+                </a>
+                <span class="auth-footer-seperator"></span>
+            </li>
+
+        </ul>
+
+        <script type="text/javascript">
+            try {
+                var metadataList = document.getElementsByName('metadata1');
+                if (metadataList.length == 0) {
+                    var input = document.createElement('input');
+                    input.name = 'metadata1';
+                    input.type = 'hidden';
+                    input.value = 'true';
+
+                    var authenticationFormList = document.getElementsByName('signIn');
+                    for (var index = 0; index < authenticationFormList.length; index++) {
+                        authenticationFormList[index].appendChild(input);
+                    }
+                } else {
+                    for (var index = 0; index < metadataList.length; index++) {
+                        metadataList[index].value = 'true';
+                    }
+                }
+            } catch (e) {
+                if (typeof window.ueLogError === 'function') {
+                    window.ueLogError(e, {
+                        message: 'Failed to populate default metadata value',
+                        logLevel: 'warn',
+                        attribution: 'FWCIMAssets'
+                    });
+                }
+            }
+        </script>
+        <script type="text/javascript">
+            window.fwcimCmd = [
+
+                ['profile', 'signIn']
+
+
+            ];
+        </script>
+
+        <span class="a-size-mini a-color-secondary">
+            &copy; 1996-2024, Amezon.com, Inc. またはその関連会社
+        </span>
+    </footer>
+</body>
+
+
+
+</html>

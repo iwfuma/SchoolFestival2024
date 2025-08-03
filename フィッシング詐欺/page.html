@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>データ表示ページ</title>
+    <link rel="stylesheet" href="page.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="displayText"></div>
+    </div>
+
+    <script>
+        // localStorageから保存されたデータを取得して表示
+        window.onload = function () {
+            const savedText = localStorage.getItem("savedText");
+            const savedPassword = localStorage.getItem("savedPassword");
+
+            console.log(savedText)
+            console.log(savedPassword)
+
+            let extractedData = ""
+            extractedData += savedText ? "Eメールまたは携帯電話番号: " + savedText + "<br>" : "Eメールまたは携帯電話番号: データがありません。<br>";
+            extractedData += savedPassword ? "パスワード: " + savedPassword : "パスワード: データがありません。";
+
+            document.getElementById("displayText").innerHTML = extractedData; // データを表示
+        }
+    </script>
+
+</body>
+
+</html>

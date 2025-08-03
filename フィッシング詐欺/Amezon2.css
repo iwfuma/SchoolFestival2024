@@ -1,0 +1,113 @@
+html {
+    scroll-behavior: smooth;
+}
+
+head {
+    background-color: white;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+/* コンテナ */
+.container2 {
+    max-width: 100%;
+    width: 350px;
+    margin: 10px auto 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-bottom: 160px;
+}
+
+/* ヘッダー部分 */
+.image-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-text img {
+    width: 150px;
+    height: 60px;
+}
+
+.image-text p {
+    margin-left: 3px;
+    font-size: 16px;
+}
+
+/* ログインセクション */
+.text {
+    display: inline-block;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+h1 {
+    font-weight: 200;
+}
+
+/* 入力フォーム */
+input {
+    width: 290px;
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+/* ボタン */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 255px;
+    height: 10px;
+    padding: 12px 24px;
+    color: black;
+    background-color: #ffd500;
+    text-decoration: none;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.btn:hover {
+    background-color: #ffc400f4;
+}
+
+/* フッター部分 */
+footer {
+    padding: 5%;
+    background-color: #f3f3f3;
+    font-size: 12px;
+    color: #888888;
+    text-align: center;
+    display: flex;
+    /* フレックスボックスを使用 */
+    flex-direction: column;
+    /* 縦に配置 */
+    align-items: center;
+    /* 水平方向にセンターに配置 */
+    position: fixed;
+    /* 常に画面の下に固定 */
+    bottom: 0;
+    /* 画面の一番下 */
+    left: 0;
+    /* 左端に配置 */
+    right: 0;
+    /* 右端に配置 */
+    z-index: 1000;
+    /* 他のコンテンツの上に表示 */
+    margin-top: 100%;
+}
+
+footer a {
+    color: #0066c0;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

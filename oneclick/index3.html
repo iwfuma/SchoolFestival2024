@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学科紹介</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+
+<body>
+    <div class="ad-container" id="adContainer">
+        <div class="ad-box" onclick="window.location.href='https://iwfuma.github.io/gakuensai/'">
+            <button class="close-btn" onclick="closeAd(event)">×</button>
+            <img src="advertising2.png" alt="広告画像" class="ad-image">
+
+        </div>
+    </div>
+
+    <!-- <script>
+        function closeAd(event) {
+            event.stopPropagation();  // ボタンがクリックされたときに親のクリックイベントを無効にする
+            document.getElementById('adContainer').style.display = 'none';
+        }
+
+        // ページが読み込まれたときに広告を表示
+        window.onload = function() {
+            document.getElementById('adContainer').style.display = 'flex';
+        }
+    </script> -->
+
+    <!-- メニューバー -->
+    <nav>
+        <ul>
+            <li><a href="#home">ホーム</a></li>
+            <li><a href="#info">トップ情報</a></li>
+            <li><a href="#news">ニュース</a></li>
+        </ul>
+    </nav>
+
+    <!-- アクセス履歴 -->
+    <div class="breadcrumb">
+        <a href="#">ホーム</a> &raquo; <a href="#">記事</a> &raquo; <a href="#">伝統文化</a>&raquo; 学科紹介
+    </div>
+
+    <div class="content">
+        <header id="home">
+            <h1>学科紹介</h1>
+        </header>
+
+        <article id="info">
+            <section class="it-engineer-description">
+                <h2 class="course-title">1. ITエンジニア学科</h2>
+                <pclass="course-description">ITエンジニア学科では、コンピュータやインターネットを使った仕事に必要な技術を、
+                    基礎からしっかり学べます。Webサイトの作り方、プログラミング、データベース、ネットワークなど、
+                    実際の仕事で使えるスキルを身につけることができます。
+                    授業では、理論を学ぶだけでなく、実際に手を動かして学ぶので、すぐに役立つ技術が習得できます。
+
+                    さらに、オンラインで学べる「Gather」を使えば、学校や自宅など、どこからでも勉強ができます。
+                    </p>
+                    <h3 class="gather-title">Gatherとは？</h3>
+                    <p class="gather-description">Gatherは、インターネットを使ったオンライン学習のためのツールです。
+                        ビデオ通話やチャットを使って、先生やほかの生徒と一緒に勉強できます。
+                        どこにいても、インターネットがあれば参加でき、
+                        自分のペースで学ぶことができるのでとても便利です。</p>
+                    <div class="centerer-image">
+                        <img src="gather.png" alt="gather画面">
+                    </div>
+            </section>
+
+
+            <h2>2. カリキュラム</h2>
+            <section>
+                <h3 class="section-title" id="section1">2.1 基本情報技術者試験</h3>
+                <p>IT分野の基礎を学んで、資格を取得するための勉強をします。プログラミングやネットワーク、データベースの基礎を学ぶことで、実際の仕事で使える技術を身につけます。試験では、問題を解く力を高めることができ、資格を取得することで、IT業界で活躍するための大きな第一歩を踏み出せます。
+                </p>
+            </section>
+
+            <section>
+                <h3 class="section-title" id="section2">2.2 Web制作演習</h3>
+                <p>Web制作の授業では、HTML、CSS、JavaScriptを使って、自分だけのWebサイトを作る方法を学びます。まずは、Webページのデザインを考え、レイアウトや色を決めます。次に、JavaScriptを使って、ボタンを押したときに何かが動くような面白い機能を作り、実際に使えるサイトを作ります。完成したWebサイトは、自分のスキルをアピールするポートフォリオとして活用できます。
+                </p>
+            </section>
+
+            <section>
+                <h3 class="section-title" id="section3">2.3 プログラミング演習</h3>
+                <p>プログラミングの授業では、PythonやJavaを使ってコーディングの練習をします。プログラミングの基礎から、少し難しいアルゴリズムを使った課題に取り組んで、実際に使えるプログラムを作ります。これらのスキルは、将来どんな仕事をしても大切な力になります。
+                </p>
+                <img src="it-image1.png" alt="programmer">
+            </section>
+
+            <h2>3. 目指せる資格</h2>
+            <ul class="career-list">
+                <li class="career-list-list">
+                    <span>国家資格 <strong>基本情報技術者試験</strong></span>
+                    <p>IT（情報技術）に関する基礎的な知識とスキルを評価するための試験です。この試験では、コンピュータやプログラミング、システムの作り方など、ITの基本を学びます。</p>
+                </li>
+                <li class="career-list-list">
+                    <span>国家資格 <strong>応用情報技術者試験</strong></span>
+                    <p>基本情報技術者試験の次のステップにあたる、もっと高度なITの知識とスキルを試す試験です。この試験では、ITの技術を実際の仕事でどう使うかを学びます。</p>
+                </li>
+            </ul>
+
+            <h2>4. 目指せる職業</h2>
+            <ul class="career-list">
+                <li class="career-list-list">
+                    <span>システムエンジニア</span>
+                    <p class="career-detail">
+                        システムエンジニアは、会社やお店のためにコンピュータのシステムを作る仕事をします。お客様が何を必要としているかを聞いて、それに合ったシステムを設計・開発・運用します。</p>
+                </li>
+                <li class="career-list-list">
+                    <span>プログラマ</span>
+                    <p class="career-detail">
+                        プログラマは、コンピュータで動くソフトを作る仕事です。プログラミング言語を使って、アプリやシステムを動かすための「コード」を書きます。</p>
+                </li>
+                <li class="career-list-list">
+                    <span>モバイルアプリエンジニア</span>
+                    <p class="career-detail">
+                        モバイルアプリエンジニアは、スマートフォンやタブレットで使うアプリを作る仕事です。iPhoneやAndroidのアプリを作り、使いやすいデザインや動きがスムーズに動くようにします。また、アプリがインターネットとつながる部分（バックエンド）も作成します。
+                    </p>
+                </li>
+                <li class="career-list-list">
+                    <span>Webアプリエンジニア</span>
+                    <p class="career-detail">
+                        Webアプリエンジニアは、インターネットで使うアプリを作る仕事です。ウェブサイトのデザインを作る「フロントエンド」と、サーバーでデータを管理する「バックエンド」の両方を担当します。</p>
+                </li>
+            </ul>
+
+
+
+
+
+
+        </article>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; IT engineer department. reserved.</p>
+    </footer>
+
+</body>
+
+</html>
