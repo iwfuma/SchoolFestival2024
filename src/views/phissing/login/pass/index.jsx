@@ -8,11 +8,13 @@ import {
   Link,
   Divider,
 } from "@mui/material";
+import { validatePassword } from "@/validation/passwordValidation";
 
 const LoginPass = () => {
   const navigate = useNavigate();
   const [savedEmail, setSavedEmail] = useState("");
-  const [password, setPassword] = useState(""); 
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const emailFromStorage = localStorage.getItem("savedText") || "";
@@ -22,15 +24,18 @@ const LoginPass = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!password.trim()) {
-      alert("パスワードを入力してください。");
+    const errorMessage = validatePassword(password);
+    if (errorMessage) {
+      setError(errorMessage);
       return;
     }
+
+    setError(null);
 
     localStorage.setItem("savedText", savedEmail);
     localStorage.setItem("savedPassword", password);
 
-  
+
     navigate("/phishing/confirm");
   };
 
@@ -78,6 +83,8 @@ const LoginPass = () => {
           fullWidth
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          error={!!error}
+          helperText={error || " "}
           sx={{ mb: 2 }}
           autoComplete="new-password"
         />

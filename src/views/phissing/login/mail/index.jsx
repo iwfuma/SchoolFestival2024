@@ -9,20 +9,24 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import amezonlogo from "../../../../assets/phishing/amezonlogo.png";
+import { validateEmailOrPhone } from "@/validation/mailValidation";
 
 const LoginMail = () => {
   const [email, setEmail] = useState("");
+  const [error, setError] = useState(null);
   const navigate = useNavigate();
 
   const onSubmit = () => {
     const trimmedEmail = email.trim();
-
-    if (trimmedEmail) {
-      localStorage.setItem("savedText", trimmedEmail);
-      navigate("/phishing/login/pass");
-    } else {
-      alert("Eメールまたは携帯電話番号を入力してください。");
+    const errorMessage = validateEmailOrPhone(email);
+    if (errorMessage) {
+      setError(errorMessage);
+      return;
     }
+
+    setError(null);
+    localStorage.setItem("savedText", email.trim());
+    navigate("/phishing/login/pass");
   };
 
   const goToSignup = () => {
@@ -71,6 +75,8 @@ const LoginMail = () => {
           sx={{ mb: 2 }}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          error={!!error}
+          helperText={error || " "}
         />
       </Box>
 
