@@ -8,6 +8,7 @@ import LoginMail from "../views/phissing/login/mail";
 import LoginPass from "../views/phissing/login/pass";
 import Confirm from "../views/phissing/confirm/confirm";
 import Login from "../views/Login";
+import NotFound from "../views/NotFound";
 
 const isAuthenticated = () => {
   return localStorage.getItem("isAuthenticated") === "true";
@@ -20,6 +21,8 @@ const PrivateRoute = ({ element }) => {
 const AppRoutes = () => {
   return (
     <Routes>
+      <Route path="/" element={<Navigate to="/login" />} />
+      
       {/* ログインページ */}
       <Route path="/login" element={<Login />} />
 
@@ -31,6 +34,8 @@ const AppRoutes = () => {
       <Route path="/phishing/login/email" element={<PrivateRoute element={<LoginMail />} />} />
       <Route path="/phishing/login/pass" element={<PrivateRoute element={<LoginPass />} />} />
       <Route path="/phishing/confirm" element={<PrivateRoute element={<Confirm />} />} />
+
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 };

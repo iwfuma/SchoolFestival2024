@@ -49,7 +49,7 @@ const TopBar = () => {
           <Button
             color="inherit"
             component={RouterLink}
-            to="/"
+            to="/home"
             sx={{ textTransform: "none" }}
           >
             ホーム

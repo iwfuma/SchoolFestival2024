@@ -43,7 +43,7 @@ const Confirm = () => {
           variant="contained"
           sx={{ mt: 4 }}
           fullWidth
-          onClick={() => navigate("/phishing")}
+          onClick={() => navigate("/home")}
         >
           戻る
         </Button>
