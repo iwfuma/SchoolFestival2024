@@ -3,6 +3,7 @@ import { Navigate } from "react-router-dom";
 import Button from "../../../component/Button/button";
 import styles from "./PhishingMail.module.css";
 import iPhon16image from "../../../assets/phishing/iPhone16.jpg"
+import amezonMail from "../../../assets/phishing/amezonMail.png"
 import { useNavigate } from "react-router-dom";
 const PhishingMail = () => {
 
@@ -18,7 +19,7 @@ const PhishingMail = () => {
       <div className={styles.container}>
         {/* ヘッダー部分 */}
         <div className={styles.header}>
-          <img src="/amezon_logo.png" alt="Amazon ロゴ" />
+          <img src={amezonMail} alt="Amazon ロゴ" />
         </div>
 
         {/* キャンペーンバナー */}

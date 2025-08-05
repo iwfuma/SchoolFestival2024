@@ -9,6 +9,7 @@ import {
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import amezonlogo from "../../../../assets/phishing/amezonlogo.png";
+
 import { validateEmailOrPhone } from "@/validation/mailValidation";
 
 const LoginMail = () => {

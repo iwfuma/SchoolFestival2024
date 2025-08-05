@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css"; 
 import advertisingImage from "../../../assets/oneClick/advertising.png";
-
+import gather from "../../../assets/oneClick/gather.png"
+import cordingimg from "../../../assets/oneClick/cordingimg.png"
 const OneClickHome = () => {
   const navigate = useNavigate();
 
@@ -72,7 +73,7 @@ const OneClickHome = () => {
               自分のペースで学ぶことができるのでとても便利です。
             </p>
             <div className="centerer-image">
-              <img src="gather.png" alt="gather画面" />
+              <img src={gather} alt="gather画面" />
             </div>
           </section>
 
@@ -95,7 +96,7 @@ const OneClickHome = () => {
             <p>
               PythonやJavaScriptを使ってコーディング練習を行い、基礎から実用的なスキルを身につけます。
             </p>
-            <img src="it-image1.png" alt="programmer" />
+            <img src={cordingimg} alt="programmer" />
           </section>
 
           {/* 資格 */}
