@@ -3,7 +3,7 @@ import { getRandomAccountNumber } from '../../../logic/oneClick/accountnum';
 import { getRandomInt } from '../../../logic/oneClick/random';
 import { getCurrentFormattedDate } from '../../../logic/oneClick/registrationDate';
 import { getRandomPaymentAmount } from '../../../logic/oneClick/randomPayment';
-import { convertSecondsToHMS } from '../../../logic/oneClick/countDown';
+import { convertSecondsToHMS } from '../../../logic/oneClick/countdown';
 
 import './Claim.css';
 
