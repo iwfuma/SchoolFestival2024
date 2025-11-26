@@ -79,7 +79,7 @@ git clone <githubのクローンURL>
 
 #### 最新の取得の仕方
 ```
-git pull <ブランチ名>
+git pull origin <ブランチ名>
 ```
 
 #### ステージ追加
