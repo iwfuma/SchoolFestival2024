@@ -28,16 +28,13 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Build
         run: npm run build
         env:
-          VITE_FALL_INTERVAL: ${{ vars.VITE_FALL_INTERVAL || 400 }}
-          VITE_GAME_TIME: ${{ vars.VITE_GAME_TIME || 100 }}
-          VITE_BLOCK_SIZE: ${{ vars.VITE_BLOCK_SIZE || 30 }}
-          VITE_ROWS: ${{ vars.VITE_ROWS || 15 }}
-          VITE_COLS: ${{ vars.VITE_COLS || 10 }}
+          VITE_LOGIN_KEY: ${{ secrets.VITE_LOGIN_KEY }}
+          VITE_LOGIN_PASSWORD: ${{ secrets.VITE_LOGIN_PASSWORD }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
