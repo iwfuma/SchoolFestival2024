@@ -1,3 +1,89 @@
+## Dockerでの実行方法
+
+このプロジェクトはDockerでローカル開発環境として実行できます。
+
+### 前提条件
+
+- Docker Desktop（またはDocker Engine）がインストールされていること
+- Docker Composeがインストールされていること（Docker Desktopには含まれています）
+
+### 初回起動手順
+
+1. **リポジトリをクローン（まだの場合）**
+   ```bash
+   git clone <リポジトリURL>
+   cd SchoolFestival2024
+   ```
+
+2. **Dockerコンテナをビルドして起動**
+   ```bash
+   docker-compose up dev
+   ```
+   
+   初回起動時は、依存関係のインストールとイメージのビルドに数分かかることがあります。
+
+3. **ブラウザでアクセス**
+   
+   ビルドが完了し、開発サーバーが起動したら、ブラウザで以下のURLにアクセスしてください：
+   ```
+   http://localhost:5173
+   ```
+
+### 起動方法
+
+```bash
+# docker-composeを使用する場合（推奨）
+docker-compose up dev
+
+# バックグラウンドで起動する場合
+docker-compose up -d dev
+
+# または直接Dockerfile.devを使用する場合
+docker build -f Dockerfile.dev -t schoolfestival2024-dev .
+docker run -p 5173:5173 -v $(pwd):/app schoolfestival2024-dev
+```
+
+### その他のコマンド
+
+```bash
+# 停止
+docker-compose down
+
+# 停止してボリュームも削除（クリーンアップ）
+docker-compose down -v
+
+# ログを確認
+docker-compose logs -f
+
+# コンテナ内でコマンドを実行
+docker-compose exec dev sh
+
+# イメージを再ビルド（依存関係を更新した場合など）
+docker-compose build --no-cache dev
+```
+
+### トラブルシューティング
+
+**ポート5173が既に使用されている場合**
+- 他のアプリケーションがポート5173を使用している可能性があります
+- `docker-compose.yml`の`ports`セクションでポート番号を変更してください（例: `"5174:5173"`）
+
+**依存関係が更新されない場合**
+- コンテナを停止して再ビルドしてください：
+  ```bash
+  docker-compose down
+  docker-compose build --no-cache dev
+  docker-compose up dev
+  ```
+
+**node_modulesが正しく動作しない場合**
+- ボリュームを削除して再起動してください：
+  ```bash
+  docker-compose down -v
+  docker-compose up dev
+  ```
+
+
 #  学園祭（2024）開発備忘録
 
 このリポジトリは、2024年学園祭で作成したプロジェクトをベースに、**ReactとGitHubを用いて再構築したバージョン**です。
