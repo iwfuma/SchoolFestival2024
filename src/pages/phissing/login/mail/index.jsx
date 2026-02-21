@@ -10,7 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 import amezonlogo from "../../../../assets/phishing/amezonlogo.png";
 
-import { validateEmailOrPhone } from "@/validation/mailValidation";
+import { validateEmailOrPhone } from "@/utils/validation/mailValidation";
 
 const LoginMail = () => {
   const [email, setEmail] = useState("");

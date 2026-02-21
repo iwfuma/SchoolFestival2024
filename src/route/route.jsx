@@ -1,14 +1,14 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import Home from "../views/Home";
-import OneClickHome from "../views/oneClick/Home";
-import Claim from "../views/oneClick/Claim";
-import PhishingMail from "../views/phissing/phishingMail";
-import LoginMail from "../views/phissing/login/mail";
-import LoginPass from "../views/phissing/login/pass";
-import Confirm from "../views/phissing/confirm/confirm";
-import Login from "../views/Login";
-import NotFound from "../views/NotFound";
+import Home from "../pages/Home";
+import OneClickHome from "../pages/oneClick/Home";
+import Claim from "../pages/oneClick/Claim";
+import PhishingMail from "../pages/phissing/phishingMail";
+import LoginMail from "../pages/phissing/login/mail";
+import LoginPass from "../pages/phissing/login/pass";
+import Confirm from "../pages/phissing/confirm/confirm";
+import Login from "../pages/Login";
+import NotFound from "../pages/NotFound";
 
 const isAuthenticated = () => {
   return localStorage.getItem("isAuthenticated") === "true";
