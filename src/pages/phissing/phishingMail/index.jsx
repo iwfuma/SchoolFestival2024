@@ -2,17 +2,15 @@ import React from "react";
 import { Navigate } from "react-router-dom";
 import Button from "../../../component/Button/button";
 import styles from "@/styles/components/PhishingMail.module.css";
-import iPhon16image from "../../../assets/phishing/iPhone16.jpg"
-import amezonMail from "../../../assets/phishing/amezonMail.png"
+import iPhon16image from "../../../assets/phishing/iPhone16.jpg";
+import amezonMail from "../../../assets/phishing/amezonMail.png";
 import { useNavigate } from "react-router-dom";
 const PhishingMail = () => {
-
   const Navigate = useNavigate();
 
   const handleAccept = () => {
-    Navigate("/phishing/login/email")
-  }
-
+    Navigate("/phishing/login/email");
+  };
 
   return (
     <div className={styles.body}>
@@ -24,9 +22,7 @@ const PhishingMail = () => {
 
         {/* キャンペーンバナー */}
         <div className={styles.banner}>
-          <img src={iPhon16image}
-            alt="iPhone 16"
-          />
+          <img src={iPhon16image} alt="iPhone 16" />
         </div>
 
         {/* 本文の内容部分 */}
@@ -41,8 +37,7 @@ const PhishingMail = () => {
           </p>
 
           {/* ボタン */}
-            <Button onClick={handleAccept}>景品を受け取る</Button>
-
+          <Button onClick={handleAccept}>景品を受け取る</Button>
 
           {/* キャンペーン情報ボックス */}
           <div className={styles.infoBox}>
@@ -63,8 +58,17 @@ const PhishingMail = () => {
         {/* フッター部分 */}
         <div className={styles.footer}>
           <p>
-            <a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM">利用規約</a> | <a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ">プライバシー規約</a> |{" "}
-            <a href="https://www.amazon.co.jp/hz/contact-us/foresight/hubgateway">ヘルプ</a>
+            <a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM">
+              利用規約
+            </a>{" "}
+            |{" "}
+            <a href="https://www.amazon.co.jp/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ">
+              プライバシー規約
+            </a>{" "}
+            |{" "}
+            <a href="https://www.amazon.co.jp/hz/contact-us/foresight/hubgateway">
+              ヘルプ
+            </a>
           </p>
           <p>&copy; 1996-2024 Amezon.com, Inc. All rights reserved.</p>
         </div>

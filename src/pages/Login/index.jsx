@@ -28,13 +28,17 @@ const Login = () => {
         placeholder="Key"
         value={key}
         onChange={(e) => setKey(e.target.value)}
-      /><br /><br />
+      />
+      <br />
+      <br />
       <input
         type="password"
         placeholder="Value"
         value={value}
         onChange={(e) => setValue(e.target.value)}
-      /><br /><br />
+      />
+      <br />
+      <br />
       <button onClick={handleLogin}>ログイン</button>
       <p style={{ color: "red" }}>{error}</p>
     </div>

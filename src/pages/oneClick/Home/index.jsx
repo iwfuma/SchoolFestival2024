@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "@/styles/pages/oneClickHome.css"; 
+import "@/styles/pages/oneClickHome.css";
 import advertisingImage from "../../../assets/oneClick/advertising.png";
 
 const OneClickHome = () => {
@@ -29,7 +29,9 @@ const OneClickHome = () => {
     <div className="page-wrapper">
       <div className="ad-container" id="adContainer">
         <div className="ad-box" onClick={OnClickAdve}>
-          <button className="close-btn" onClick={closeAd}>×</button>
+          <button className="close-btn" onClick={closeAd}>
+            ×
+          </button>
           <img src={advertisingImage} alt="広告画像" className="ad-image" />
         </div>
       </div>
@@ -37,15 +39,22 @@ const OneClickHome = () => {
       {/* メニュー */}
       <nav>
         <ul>
-          <li><a href="#home">ホーム</a></li>
-          <li><a href="#info">トップ情報</a></li>
-          <li><a href="#news">ニュース</a></li>
+          <li>
+            <a href="#home">ホーム</a>
+          </li>
+          <li>
+            <a href="#info">トップ情報</a>
+          </li>
+          <li>
+            <a href="#news">ニュース</a>
+          </li>
         </ul>
       </nav>
 
       {/* パンくずリスト */}
       <div className="breadcrumb">
-        <a href="#">ホーム</a> &raquo; <a href="#">記事</a> &raquo; <a href="#">伝統文化</a> &raquo; 学科紹介
+        <a href="#">ホーム</a> &raquo; <a href="#">記事</a> &raquo;{" "}
+        <a href="#">伝統文化</a> &raquo; 学科紹介
       </div>
 
       {/* メインコンテンツ */}
@@ -79,19 +88,25 @@ const OneClickHome = () => {
           {/* カリキュラム */}
           <h2>2. カリキュラム</h2>
           <section>
-            <h3 className="section-title" id="section1">2.1 基本情報技術者試験</h3>
+            <h3 className="section-title" id="section1">
+              2.1 基本情報技術者試験
+            </h3>
             <p>
               IT分野の基礎を学んで、資格を取得するための勉強をします。プログラミングやネットワーク、データベースの基礎を学ぶことで、実際の仕事で使える技術を身につけます。
             </p>
           </section>
           <section>
-            <h3 className="section-title" id="section2">2.2 Web制作演習</h3>
+            <h3 className="section-title" id="section2">
+              2.2 Web制作演習
+            </h3>
             <p>
               HTML、CSS、JavaScriptでWebサイト制作を学びます。JavaScriptで動きを付けて、ポートフォリオとして活用します。
             </p>
           </section>
           <section>
-            <h3 className="section-title" id="section3">2.3 プログラミング演習</h3>
+            <h3 className="section-title" id="section3">
+              2.3 プログラミング演習
+            </h3>
             <p>
               PythonやJavaScriptを使ってコーディング練習を行い、基礎から実用的なスキルを身につけます。
             </p>

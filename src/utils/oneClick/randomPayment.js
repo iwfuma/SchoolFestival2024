@@ -1,4 +1,4 @@
-import { getRandomInt } from './random.js';
+import { getRandomInt } from "./random.js";
 
 export function getRandomPaymentAmount() {
   return getRandomInt(1, 500) * 10 ** 6;
