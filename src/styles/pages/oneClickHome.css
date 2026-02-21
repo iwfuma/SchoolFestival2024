@@ -1,306 +1,303 @@
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    font-size: 18px;
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  font-size: 18px;
 }
 
 /* メニューバーのスタイル */
 nav {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul li {
-    margin: 0 20px;
+  margin: 0 20px;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 5px 10px;
-    font-size: 22px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 22px;
 }
 
 nav ul li a:hover {
-    background-color: #66bb6a;
-    border-radius: 5px;
+  background-color: #66bb6a;
+  border-radius: 5px;
 }
 
 /* アクセス履歴のスタイル */
 .breadcrumb {
-    background-color: #f0f9f0;
-    padding: 10px 20px;
-    margin-top: 50px; /* メニューバーのスペースを空ける */
-    color: #333;
+  background-color: #f0f9f0;
+  padding: 10px 20px;
+  margin-top: 50px; /* メニューバーのスペースを空ける */
+  color: #333;
 }
 
 .breadcrumb a {
-    color: #4CAF50;
-    text-decoration: none;
-    font-size: 20px; /* フォントサイズを変更 */
+  color: #4caf50;
+  text-decoration: none;
+  font-size: 20px; /* フォントサイズを変更 */
 }
 
 .breadcrumb a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* ページ全体に適用されるマージン */
 .content {
-    padding-top: 40px; /* メニューバーの高さに合わせて調整 */
+  padding-top: 40px; /* メニューバーの高さに合わせて調整 */
 }
 
 /* 記事部分のスタイル */
 header {
-    text-align: center;
-    margin-bottom: 40px;
-    
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 header h1 {
-    font-size: 3.5em; /* フォントサイズを変更 */
-    color: #333;
+  font-size: 3.5em; /* フォントサイズを変更 */
+  color: #333;
 }
 
 article {
-    max-width: 1000px; /* 横幅を広げました */
-    margin: 0 auto;
-    background-color: #fdfdfd;
-    padding: 30px; /* パディングを少し増やして内容を広げます */
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: left;
+  max-width: 1000px; /* 横幅を広げました */
+  margin: 0 auto;
+  background-color: #fdfdfd;
+  padding: 30px; /* パディングを少し増やして内容を広げます */
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
 }
 
 article h2 {
-    color: #555;
-    margin-top: 20px;
-    font-size: 2.4em; /* 見出しフォントサイズを少し調整 */
+  color: #555;
+  margin-top: 20px;
+  font-size: 2.4em; /* 見出しフォントサイズを少し調整 */
 }
 
 article p {
-    margin-bottom: 20px;
-    color: #333;
-    font-size: 1.1em;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.1em;
 }
 
 article img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
 
 blockquote {
-    margin: 20px 0;
-    padding: 10px 20px;
-    background-color: #f9f9f9;
-    border-left: 5px solid #ccc;
-    font-style: italic;
-    color: #666;
+  margin: 20px 0;
+  padding: 10px 20px;
+  background-color: #f9f9f9;
+  border-left: 5px solid #ccc;
+  font-style: italic;
+  color: #666;
 }
 
 ul {
-    list-style-type: disc;
-    margin-left: 40px;
-    color: #333;
+  list-style-type: disc;
+  margin-left: 40px;
+  color: #333;
 }
 
 footer {
-    text-align: center;
-    margin-top: 40px;
-    color: #666;
-    background-color: #4CAF50;
-    color: white;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  color: #666;
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
 }
 
 /* 広告表示のスタイル */
 .ad-container {
-    padding: 0; 
-    margin: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* 背景を薄暗くする */
-    display: none; /* 初期状態では非表示 */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.3s ease; /* フェードイン/アウトのアニメーション効果を追加 */
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* 背景を薄暗くする */
+  display: none; /* 初期状態では非表示 */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.3s ease; /* フェードイン/アウトのアニメーション効果を追加 */
 }
 
 .ad-box {
-    background: rgb(255, 255, 255);
-    margin: 0;
-    padding: 0;
-    display: block;
-    padding: 0;
-    border-radius: 10px;
-    text-align: auto;
-    position: relative; 
-    max-width: 55%; /* 最大幅を90%に設定し、画面サイズに応じた調整を可能に */
-    height: auto;
+  background: rgb(255, 255, 255);
+  margin: 0;
+  padding: 0;
+  display: block;
+  padding: 0;
+  border-radius: 10px;
+  text-align: auto;
+  position: relative;
+  max-width: 55%; /* 最大幅を90%に設定し、画面サイズに応じた調整を可能に */
+  height: auto;
 }
 
 .ad-image {
-    display: block;
+  display: block;
 }
 
 .close-btn {
-    background: none;
-    background-color: rgba(240, 240, 240, 0.5);
-    border: none;
-    font-size: 20px;
-    color: #333;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border-radius: 100px;
+  background: none;
+  background-color: rgba(240, 240, 240, 0.5);
+  border: none;
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 100px;
 }
 
 .gather {
-    color: red;
+  color: red;
 }
 
 .centerer-image {
-    width: auto;
-    text-align: center;
-    display: block;
-    margin: 20px auto;
+  width: auto;
+  text-align: center;
+  display: block;
+  margin: 20px auto;
 }
 
 section {
-    padding: 20px 10px; /* 上下の余白を追加 */
-    margin: 20px 0; /* 各セクション間の余白 */
-    background-color: #f4f9f4; /* セクションの背景色 */
-    border-top: 2px solid #ddd; /* 上部の区切り線 */
-    border-bottom: 2px solid #ddd; /* 下部の区切り線 */
+  padding: 20px 10px; /* 上下の余白を追加 */
+  margin: 20px 0; /* 各セクション間の余白 */
+  background-color: #f4f9f4; /* セクションの背景色 */
+  border-top: 2px solid #ddd; /* 上部の区切り線 */
+  border-bottom: 2px solid #ddd; /* 下部の区切り線 */
 }
 
 section h3 {
-    color: #333; /* 見出しの色 */
-    margin-bottom: 10px; /* 下のマージン */
-    font-size: 1.5em; /* フォントサイズを変更 */
+  color: #333; /* 見出しの色 */
+  margin-bottom: 10px; /* 下のマージン */
+  font-size: 1.5em; /* フォントサイズを変更 */
 }
 
 section p {
-    max-width: 45em; /* 45文字相当の幅 */
-    margin: 0 auto; /* 中央揃え */
-    line-height: 1.5; /* 行間を広げて読みやすく */
-    overflow-wrap: break-word; /* 単語の途中で改行を許可 */
+  max-width: 45em; /* 45文字相当の幅 */
+  margin: 0 auto; /* 中央揃え */
+  line-height: 1.5; /* 行間を広げて読みやすく */
+  overflow-wrap: break-word; /* 単語の途中で改行を許可 */
 }
 
 .section-title {
-    font-size: 1.8em;
-    color: #4CAF50; /* タイトルの色 */
-    border-left: 4px solid #4CAF50; /* 左側に線を追加 */
-    padding-left: 10px;
-    margin-bottom: 20px;
+  font-size: 1.8em;
+  color: #4caf50; /* タイトルの色 */
+  border-left: 4px solid #4caf50; /* 左側に線を追加 */
+  padding-left: 10px;
+  margin-bottom: 20px;
 }
 
 .career-list-list {
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fdfdfd;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fdfdfd;
 }
 
 .career-list-list span {
-    font-weight: bold;
-    font-size: 1.2em;
-    color: #4CAF50;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #4caf50;
 }
 
 /* 詳細情報のスタイル */
 .career-detail {
-    margin-top: 10px;
-    color: #555;
-    line-height: 1.6;
-    font-size: 1em;
+  margin-top: 10px;
+  color: #555;
+  line-height: 1.6;
+  font-size: 1em;
 }
 
 /* .career-listにリストのスタイルを追加 */
 .career-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 #info p {
-    max-width: 45em; /* 45文字相当の幅 */
-    margin: 0 auto; /* 中央揃え */
-    line-height: 1.5; /* 行間を広げて読みやすく */
-    overflow-wrap: break-word; /* 単語の途中で改行を許可 */
+  max-width: 45em; /* 45文字相当の幅 */
+  margin: 0 auto; /* 中央揃え */
+  line-height: 1.5; /* 行間を広げて読みやすく */
+  overflow-wrap: break-word; /* 単語の途中で改行を許可 */
 }
 
 img {
-    width: auto;
-    height: auto;
-    margin: 15px 0;
-    border-radius: 5px;
+  width: auto;
+  height: auto;
+  margin: 15px 0;
+  border-radius: 5px;
 }
 
 .ad-image {
-    display: block;
-    max-width: 90%; /* 親要素に対して90%以内に制限 */
-    max-height: 80vh; /* ビューポートの高さの80%以内に制限 */
-    margin: 0 auto; /* 中央揃え */
+  display: block;
+  max-width: 90%; /* 親要素に対して90%以内に制限 */
+  max-height: 80vh; /* ビューポートの高さの80%以内に制限 */
+  margin: 0 auto; /* 中央揃え */
 }
 
 /* ITエンジニア学科の説明文 */
 .it-engineer-description {
-    font-size: 1.5em; /* 文字を大きくする（1.5倍） */
-    line-height: 1.8; /* 行間を広げて読みやすく */
-    color: #333; /* 文字色 */
-    margin-bottom: 20px; /* 下にスペースを追加 */
+  font-size: 1.5em; /* 文字を大きくする（1.5倍） */
+  line-height: 1.8; /* 行間を広げて読みやすく */
+  color: #333; /* 文字色 */
+  margin-bottom: 20px; /* 下にスペースを追加 */
 }
 
 /* コースの説明 */
 .course-description {
-    font-size: 1.2em; /* 文字を大きくして読みやすく */
-    color: #555;
-    line-height: 1.8; /* 行間を広げて読みやすさを向上 */
-    margin-bottom: 15px;
+  font-size: 1.2em; /* 文字を大きくして読みやすく */
+  color: #555;
+  line-height: 1.8; /* 行間を広げて読みやすさを向上 */
+  margin-bottom: 15px;
 }
 
 /* Gatherのタイトル */
 .gather-title {
-    font-size: 2em; /* 読みやすく調整 */
-    color: #4CAF50;
-    margin-top: 30px;
-    font-weight: bold; /* 太字にして目立たせる */
+  font-size: 2em; /* 読みやすく調整 */
+  color: #4caf50;
+  margin-top: 30px;
+  font-weight: bold; /* 太字にして目立たせる */
 }
 
 /* Gatherの説明 */
 .gather-description {
-    font-size: 1.2em; /* 説明文の文字を少し大きく */
-    color: #555;
-    line-height: 1.8;
-    margin-bottom: 15px;
+  font-size: 1.2em; /* 説明文の文字を少し大きく */
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 15px;
 }
-
-

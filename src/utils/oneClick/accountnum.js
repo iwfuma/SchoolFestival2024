@@ -1,5 +1,5 @@
 export function getRandomAccountNumber() {
-  let accountNumber = '';
+  let accountNumber = "";
 
   accountNumber += Math.floor(Math.random() * 9) + 1; // 1〜9の数字（左端は0禁止）
 
@@ -8,7 +8,6 @@ export function getRandomAccountNumber() {
   }
   return accountNumber;
 }
-
 
 // 修正前↓
 

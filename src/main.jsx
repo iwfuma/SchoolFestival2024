@@ -6,8 +6,8 @@ import "./styles/global/index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/SchoolFestival2024"> 
-      <App /> 
+    <BrowserRouter basename="/SchoolFestival2024">
+      <App />
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
 );

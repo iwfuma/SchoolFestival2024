@@ -22,18 +22,36 @@ const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Navigate to="/login" />} />
-      
+
       {/* ログインページ */}
       <Route path="/login" element={<Login />} />
 
       {/* 認証必須ページ */}
       <Route path="/home" element={<PrivateRoute element={<Home />} />} />
-      <Route path="/oneclick" element={<PrivateRoute element={<OneClickHome />} />} />
-      <Route path="/oneclick/claim" element={<PrivateRoute element={<Claim />} />} />
-      <Route path="/phishing" element={<PrivateRoute element={<PhishingMail />} />} />
-      <Route path="/phishing/login/email" element={<PrivateRoute element={<LoginMail />} />} />
-      <Route path="/phishing/login/pass" element={<PrivateRoute element={<LoginPass />} />} />
-      <Route path="/phishing/confirm" element={<PrivateRoute element={<Confirm />} />} />
+      <Route
+        path="/oneclick"
+        element={<PrivateRoute element={<OneClickHome />} />}
+      />
+      <Route
+        path="/oneclick/claim"
+        element={<PrivateRoute element={<Claim />} />}
+      />
+      <Route
+        path="/phishing"
+        element={<PrivateRoute element={<PhishingMail />} />}
+      />
+      <Route
+        path="/phishing/login/email"
+        element={<PrivateRoute element={<LoginMail />} />}
+      />
+      <Route
+        path="/phishing/login/pass"
+        element={<PrivateRoute element={<LoginPass />} />}
+      />
+      <Route
+        path="/phishing/confirm"
+        element={<PrivateRoute element={<Confirm />} />}
+      />
 
       <Route path="*" element={<NotFound />} />
     </Routes>

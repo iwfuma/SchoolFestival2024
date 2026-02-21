@@ -37,7 +37,7 @@ const Confirm = () => {
         <Typography variant="subtitle2" sx={{ mt: 2 }}>
           パスワード：
         </Typography>
-        <Typography>{password ||  "未入力"}</Typography>
+        <Typography>{password || "未入力"}</Typography>
 
         <Button
           variant="contained"

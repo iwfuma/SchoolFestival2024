@@ -19,4 +19,3 @@ document.addEventListener('DOMContentLoaded', () => {
     let customerNumber = getRandomInt(10000000, 99999999);
     document.getElementById('customerNumber').textContent = customerNumber;})
 */
-    

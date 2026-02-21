@@ -35,7 +35,6 @@ const LoginPass = () => {
     localStorage.setItem("savedText", savedEmail);
     localStorage.setItem("savedPassword", password);
 
-
     navigate("/phishing/confirm");
   };
 
@@ -68,7 +67,12 @@ const LoginPass = () => {
       </Typography>
 
       {/* 表示用メールアドレス */}
-      <Box display="flex" alignItems="center" justifyContent="space-between" mb={2}>
+      <Box
+        display="flex"
+        alignItems="center"
+        justifyContent="space-between"
+        mb={2}
+      >
         <Typography>{savedEmail || "メールが未設定です"}</Typography>
         <Link href="/phishing/login/email">変更</Link>
       </Box>
