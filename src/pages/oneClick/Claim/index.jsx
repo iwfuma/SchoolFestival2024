@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { getRandomAccountNumber } from '../../../logic/oneClick/accountnum';
-import { getRandomInt } from '../../../logic/oneClick/random';
-import { getCurrentFormattedDate } from '../../../logic/oneClick/registrationDate';
-import { getRandomPaymentAmount } from '../../../logic/oneClick/randomPayment';
-import { convertSecondsToHMS } from '../../../logic/oneClick/countdown';
+import { getRandomAccountNumber } from '@/utils/oneClick/accountnum';
+import { getRandomInt } from '@/utils/oneClick/random';
+import { getCurrentFormattedDate } from '@/utils/oneClick/registrationDate';
+import { getRandomPaymentAmount } from '@/utils/oneClick/randomPayment';
+import { convertSecondsToHMS } from '@/utils/oneClick/countdown';
 
-import './Claim.css';
+import styles from '@/styles/components/Claim.module.css';
 
 const Claim = () => {
   const [accountNumber, setAccountNumber] = useState('');
@@ -42,7 +42,7 @@ const Claim = () => {
   const { hours, minutes, seconds } = convertSecondsToHMS(secondsLeft);
 
   return (
-    <div className="claim-container" style={{ maxWidth: 700, margin: '0 auto', padding: 20 }}>
+    <div className={styles.container} style={{ maxWidth: 700, margin: '0 auto', padding: 20 }}>
       <h1 style={{ textAlign: 'center', marginBottom: 30 }}>会員登録が完了しました</h1>
       <p style={{ fontSize: '1.2em', textAlign: 'center' }}>
         期限内に <span style={{ fontWeight: 'bold' }}>{paymentAmount.toLocaleString()}</span> 円お支払いください。
@@ -57,7 +57,7 @@ const Claim = () => {
       </div>
 
       <h2>会員情報</h2>
-      <table className="info-table" style={{ width: '100%', marginBottom: 30 }}>
+      <table style={{ width: '100%', marginBottom: 30 }}>
         <tbody>
           <tr>
             <td>お客様番号</td>
@@ -71,7 +71,7 @@ const Claim = () => {
       </table>
 
       <h2>振込先口座</h2>
-      <table className="info-table" style={{ width: '100%', marginBottom: 30 }}>
+      <table style={{ width: '100%', marginBottom: 30 }}>
         <tbody>
           <tr>
             <td>銀行名（銀行コード）</td>
@@ -93,7 +93,7 @@ const Claim = () => {
       </table>
 
       <h2>お問い合わせ</h2>
-      <table className="info-table" style={{ width: '100%', marginBottom: 30 }}>
+      <table style={{ width: '100%', marginBottom: 30 }}>
         <tbody>
           <tr>
             <td>電話番号</td>

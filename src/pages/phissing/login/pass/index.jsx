@@ -8,7 +8,7 @@ import {
   Link,
   Divider,
 } from "@mui/material";
-import { validatePassword } from "@/validation/passwordValidation";
+import { validatePassword } from "@/utils/validation/passwordValidation";
 
 const LoginPass = () => {
   const navigate = useNavigate();

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Home.css"; 
+import "@/styles/pages/oneClickHome.css"; 
 import advertisingImage from "../../../assets/oneClick/advertising.png";
 import gather from "../../../assets/oneClick/gather.png"
 import cordingimg from "../../../assets/oneClick/cordingimg.png"
